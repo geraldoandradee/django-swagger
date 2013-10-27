@@ -1,0 +1,22 @@
+{
+    "apiVersion": "%(api_version)s",
+    "swaggerVersion": "1.2",
+    "apis": [
+        %(all_apis)s
+    ],
+    "authorizations": {
+    "oauth2": {},
+    "apiKey": {},
+    "basicAuth": {
+        "type": "basicAuth"
+    }
+},
+    "info": {
+        "title": "%(title)s",
+        "description": "%(description)s",
+        "termsOfServiceUrl": "%(terms_of_service_url)s",
+        "contact": "%(contact)s",
+        "license": "%(license)s",
+        "licenseUrl": "%(license_url)s"
+    }
+}

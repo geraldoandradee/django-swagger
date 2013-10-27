@@ -1,0 +1,4 @@
+{
+    "path": "%(path)s",
+    "description": "%(description)s"
+}

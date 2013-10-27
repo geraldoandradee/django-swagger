@@ -1,0 +1,11 @@
+{
+    "name": "%(name)s",
+    "defaultValue": "%(default_value)s",
+    "description": "%(description)s",
+    "required": %(required)s,
+    "type": "%(type)s",
+    "format": "%(format)s",
+    "dataType": "%(data_type)s",
+    "paramType": "%(param_type)s",
+    "allowMultiple":false
+}

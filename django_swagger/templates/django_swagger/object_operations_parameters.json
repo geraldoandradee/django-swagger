@@ -1,0 +1,10 @@
+{
+    "name": "%(name)s",
+    "description": "%(description)s",
+    "required": %(required)s,
+    "type": "%(type)s",
+    "format": "%(format)s",
+    "paramType": "%(param_type)s",
+    "minimum": "%(minimum)s",
+    "maximum": "%(maximum)s"
+}

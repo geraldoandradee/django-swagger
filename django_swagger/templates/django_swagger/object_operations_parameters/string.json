@@ -1,0 +1,8 @@
+{
+    "name": "%(name)s",
+    "description": "%(description)s",
+    "required": %(required)s,
+    "dataType": "string",
+    "allowMultiple": false,
+    "paramType": "%(param_type)s"
+}

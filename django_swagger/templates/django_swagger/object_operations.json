@@ -1,0 +1,18 @@
+{
+    "path": "%(path)s",
+    "operations": [
+        {
+            "method": "%(method)s",
+            "summary": "%(summary)s",
+            "notes": "%(notes)s",
+            "type": "%(type)s",
+            "nickname": "%(nickname)",
+            "parameters": [
+                %(parameters)s
+            ],
+            "responseMessages": [
+                %(response_messages)s
+            ]
+        }
+    ]
+}

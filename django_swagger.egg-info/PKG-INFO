@@ -1,0 +1,48 @@
+Metadata-Version: 1.0
+Name: django-swagger
+Version: 0.0.2
+Summary: A Django extension to Extension to manage users in django application.
+Home-page: https://bitbucket.org/quein/django-swagger/
+Author: Geraldo Andrade
+Author-email: geraldo@geraldoandrade.com
+License: MIT
+Download-URL: https://bitbucket.org/quein/django-swagger/get/master.zip
+Description: .. Django Swagger documentation master file, created by
+           sphinx-quickstart on Sat Oct 19 12:30:34 2013.
+           You can adapt this file completely to your liking, but it should at least
+           contain the root `toctree` directive.
+        
+        Django Swagger's Documentation
+        ==============================
+        
+        
+        
+        
+        Contents:
+        
+        .. toctree::
+           :maxdepth: 4
+        
+        
+        
+        Indices and tables
+        ==================
+        
+        * :ref:`genindex`
+        * :ref:`modindex`
+        * :ref:`search`
+        
+        
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP
