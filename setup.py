@@ -16,7 +16,7 @@ setup(
     zip_safe=True,
     platforms='any',
     install_requires=[
-        'django==1.5.4'
+        'django>=1.5.4'
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',

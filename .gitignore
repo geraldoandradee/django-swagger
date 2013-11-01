@@ -1,2 +1,4 @@
 _build_docs
 build
+.idea
+*.pyc
