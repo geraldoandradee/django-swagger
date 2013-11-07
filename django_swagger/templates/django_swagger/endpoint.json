@@ -1,0 +1,8 @@
+{
+    "swaggerVersion": "1.2",
+    "apis": %(apis)s,
+    "models": {},
+    "basePath": "%(base_path)s",
+    "resourcePath": "%(resource_path)s",
+    "apiVersion": "%(api_version)s"
+}

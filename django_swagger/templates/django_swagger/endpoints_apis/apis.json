@@ -1,0 +1,70 @@
+[
+    {
+        "operations": [
+            {
+                "parameters": [
+                    {
+                        "paramType": "path",
+                        "required": true,
+                        "type": "string",
+                        "name": "username",
+                        "description": "The name that needs to be fetched. Use user1 for testing."
+                    }
+                ],
+                "type": "User",
+                "notes": "",
+                "summary": "Get user by user name",
+                "nickname": "getUserByName",
+                "method": "GET"
+            }
+        ],
+        "path": "/user/{username}"
+    },
+    {
+        "operations": [
+            {
+                "parameters": [
+                    {
+                        "paramType": "query",
+                        "required": true,
+                        "type": "string",
+                        "name": "username",
+                        "description": "The user name for login"
+                    },
+                    {
+                        "paramType": "query",
+                        "required": true,
+                        "type": "string",
+                        "name": "password",
+                        "description": "The password for login in clear text"
+                    }
+                ],
+                "type": "string",
+                "notes": "",
+                "responseMessages": [
+                    {
+                        "message": "Invalid username and password combination",
+                        "code": 200
+                    }
+                ],
+                "summary": "Logs user into the system",
+                "nickname": "loginUser",
+                "method": "GET"
+            }
+        ],
+        "path": "/user/login"
+    },
+    {
+        "operations": [
+            {
+                "parameters": [],
+                "type": "void",
+                "notes": "",
+                "summary": "Logs out current logged in user session",
+                "nickname": "logoutUser",
+                "method": "GET"
+            }
+        ],
+        "path": "/user/logout"
+    }
+]

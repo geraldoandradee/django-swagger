@@ -1,0 +1,14 @@
+"%(model_name)s": {
+    "uniqueItems": false,
+    "properties": {
+
+        "id": {
+            "uniqueItems": false,
+            "type": "long",
+            "required": false
+        }
+    },
+    "id": "user",
+    "type": "any",
+    "required": false
+}

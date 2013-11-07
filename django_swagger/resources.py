@@ -127,3 +127,10 @@ def get_group_operations(settings):
 
 def get_operations(settings):
     return ''
+
+def get_endpoint(settings, name):
+    endpoints = get_endpoints(settings)
+
+    for ed in endpoints:
+        if ed.name == name:
+            return ed
