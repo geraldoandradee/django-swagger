@@ -1,4 +1,5 @@
 # Django settings for swagger_test project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -161,5 +162,6 @@ LOGGING = {
 DJANGO_SWAGGER = {
     'api_version': '0.1',
     'namespace': 'swagger.resources',
-    'endpoints': ['MyEndpoint1', 'MyEndpoint2', 'MyEndpoint3']
+    'endpoints': ['MyEndpoint1', 'MyEndpoint2', 'MyEndpoint3'],
+    'CONFIG_FILE': os.path.abspath(os.path.join('.', 'swagger.yaml'))
 }

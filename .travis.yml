@@ -1,0 +1,29 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+# command to install dependencies
+install: "python install setup.py"
+# command to run tests
+script: py.test django_swagger/
+
+env:
+  - DJANGO_VERSION=1.5.4
+  - DJANGO_VERSION=1.6.5
+  - DJANGO_VERSION=1.6.4
+  - DJANGO_VERSION=1.6.3
+  - DJANGO_VERSION=1.6.2
+  - DJANGO_VERSION=1.6.1
+  - DJANGO_VERSION=1.6
+  - DJANGO_VERSION=1.5.8
+  - DJANGO_VERSION=1.5.7
+  - DJANGO_VERSION=1.5.6
+  - DJANGO_VERSION=1.5.5
+  - DJANGO_VERSION=1.5.4
+  - DJANGO_VERSION=1.5.3
+  - DJANGO_VERSION=1.5.2
+  - DJANGO_VERSION=1.5.1
+  - DJANGO_VERSION=1.5

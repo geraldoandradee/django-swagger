@@ -2,3 +2,6 @@ _build_docs
 build
 .idea
 *.pyc
+dist
+django_swagger.egg-info
+django_swagger/tests/swagger_test/*

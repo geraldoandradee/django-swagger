@@ -26,9 +26,21 @@ class MyGroupEndpoint2(GroupEndpoint):
     _description = 'A crud for pets.'
 
 
+
 class MyEndpoint1(Endpoint):
     group = MyGroupEndpoint
 
+    path = '/user/{id}'
+    method = 'GET'
+    decription = 'Get user by ID'
+    implementation_notes = 'Returns a pet based on ID'
+
+    parameters = [{'name':'id', 'required': True, 'type': 'integer', 'param_type': 'path',
+                   'description': 'ID do usuário'},
+                  {'name':'id', 'required': True, 'type': 'integer', 'param_type': 'path',
+                   'description': 'ID do usuário'}]
+
+    responses = [400, 500, 404]
 
 
 class MyEndpoint2(Endpoint):

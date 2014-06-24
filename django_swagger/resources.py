@@ -100,7 +100,10 @@ def get_api(group):
     return group._api
 
 def get_endpoints(settings):
-    splitted_names = settings['namespace'].split('.') # todo: stopped here
+    try:
+        splitted_names = settings['namespace'].split('.') # todo: stopped here
+    except Exception as e:
+        pass
     endpoints = []
     try:
         namespace = __import__(settings['namespace'])

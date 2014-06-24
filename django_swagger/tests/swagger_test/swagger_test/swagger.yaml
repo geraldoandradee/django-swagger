@@ -1,0 +1,10 @@
+API:
+  api_version: '0.0.3'
+  title: 'Django Swagger'
+  description: 'Um teste do django swagger. Aqui pode ter uma descrição muito grande.'
+  terms_of_service_url: 'http://geraldoandrade.com/terms_of_service'
+  contact: 'Geraldo Andrade (geraldo@geraldoandrade.com)'
+  license: ''
+  license_url: 'javascript:;'
+
+

@@ -4,19 +4,20 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-swagger',
-    version='0.0.2',
-    url='https://bitbucket.org/quein/django-swagger/',
+    version='0.1.0',
+    url='https://github.com/geraldoandradee/django-swagger',
     license='MIT',
     author='Geraldo Andrade',
     author_email='geraldo@geraldoandrade.com',
-    description='A Django extension to Extension to manage users in django application.',
+    description='A Django extension Swagger UI to mapping REST API\'s in django application.',
     long_description=open('README.rst').read(),
     packages=find_packages(),
-    download_url='https://bitbucket.org/quein/django-swagger/get/master.zip',
+    download_url='https://github.com/geraldoandradee/django-swagger/archive/master.zip',
     zip_safe=True,
     platforms='any',
     install_requires=[
-        'django>=1.5.4'
+        'django>=1.5.4',
+        'PyYAML>=3.11'
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
