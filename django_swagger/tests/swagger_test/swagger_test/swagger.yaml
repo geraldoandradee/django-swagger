@@ -1,4 +1,4 @@
-API:
+INFO:
   api_version: '0.0.3'
   title: 'Django Swagger'
   description: 'Um teste do django swagger. Aqui pode ter uma descrição muito grande.'
@@ -7,4 +7,31 @@ API:
   license: ''
   license_url: 'javascript:;'
 
+GROUPS:
+  - GROUP:
+    name: 'pets'
+    description: 'Operations about pets'
 
+    ENDPOINTS:
+      - ENDPOINT:
+        REQUEST:
+          path: '/pet/getPetById'
+          description: 'Find pet by ID'
+          method: 'GET'
+          PARAMETERS:
+            - PARAMETER:
+              name: 'id'
+              type: 'int'
+              required: true
+        RESPONSE:
+          type: 'application/json'
+          - ERRORS:
+            404: 'Pet not find'
+            400: 'Bad request'
+            500: 'Server error'
+
+
+
+      - ENDPOINT:
+      - ENDPOINT:
+      - ENDPOINT:
