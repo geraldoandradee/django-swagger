@@ -1,6 +1,6 @@
-# Django Swagger's Documentation #
+# Django Swagger's Documentation [![Build Status](https://travis-ci.org/geraldoandradee/django-swagger.svg?branch=master)](https://travis-ci.org/geraldoandradee/django-swagger) #
 
-This documentation covers django-swagger libr [![Build Status](https://travis-ci.org/geraldoandradee/django-swagger.svg?branch=master)](https://travis-ci.org/geraldoandradee/django-swagger)
+This documentation covers django-swagger libr 
 
 ## How to use django-swagger ##
 
