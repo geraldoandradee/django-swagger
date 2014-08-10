@@ -10,7 +10,7 @@ setup(
     author='Geraldo Andrade',
     author_email='geraldo@geraldoandrade.com',
     description='A Django extension Swagger UI to mapping REST API\'s in django application.',
-    long_description=open('django_swagger/docs/README.rst').read(),
+    long_description=open('django_swagger/docs/index.rst').read(),
     packages=find_packages(),
     download_url='https://github.com/geraldoandradee/django-swagger/archive/master.zip',
     zip_safe=True,
