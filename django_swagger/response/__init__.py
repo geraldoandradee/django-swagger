@@ -24,10 +24,6 @@ class Response(BaseResponse):
         """
         return self._response_types[0]
 
-    def __init__(self, *args, **kwargs):
-        for argument in kwargs:
-            setattr(self, argument, kwargs[argument])
-
     @property
     def response_type(self, value):
         return self._response_type
