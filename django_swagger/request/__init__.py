@@ -1,1 +1,3 @@
-__author__ = 'geraldoandradee'
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+

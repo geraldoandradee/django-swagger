@@ -1,9 +1,16 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 from __future__ import (absolute_import, print_function)
+from django_swagger import Base
 
-class Response(object):
-    response_types = ["application/json", "application/xml", "text/plain", "text/html"]
+class BaseResponse(Base):
+    _response_types = ["application/json", "application/xml", "text/plain", "text/html"]
+
+
+class Response(BaseResponse):
+    __attributes__ = ['response_type']
+    __validators__ = [{'validate_range_in': ['response_type']}]
+    _response_type = None
 
     @property
     def default_response_type(self):
@@ -15,11 +22,19 @@ class Response(object):
 
         :rtype : str
         """
-        return self.response_types[0]
+        return self._response_types[0]
 
     def __init__(self, *args, **kwargs):
         for argument in kwargs:
             setattr(self, argument, kwargs[argument])
+
+    @property
+    def response_type(self, value):
+        return self._response_type
+
+    @response_type.setter
+    def response_type(self, value):
+        self._response_type = value
 
 
 class ResponseObject(Response):
