@@ -6,7 +6,7 @@ python:
   - "3.3"
   - "3.4"
 # command to install dependencies
-install: "python install setup.py"
+install: "python setup.py install"
 # command to run tests
 script: py.test django_swagger/tests
 
