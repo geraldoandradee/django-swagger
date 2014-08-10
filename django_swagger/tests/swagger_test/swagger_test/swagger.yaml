@@ -24,7 +24,7 @@ GROUPS:
               type: 'int'
               required: true
         RESPONSE:
-          type: 'application/json'
+          type: ['application/json', 'text/html']
           - ERRORS:
             404: 'Pet not find'
             400: 'Bad request'

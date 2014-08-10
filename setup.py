@@ -4,13 +4,13 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-swagger',
-    version='0.1.0',
+    version='0.2.0',
     url='https://github.com/geraldoandradee/django-swagger',
     license='MIT',
     author='Geraldo Andrade',
     author_email='geraldo@geraldoandrade.com',
     description='A Django extension Swagger UI to mapping REST API\'s in django application.',
-    long_description=open('README.rst').read(),
+    long_description=open('django_swagger/docs/README.rst').read(),
     packages=find_packages(),
     download_url='https://github.com/geraldoandradee/django-swagger/archive/master.zip',
     zip_safe=True,

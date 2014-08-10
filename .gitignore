@@ -5,3 +5,4 @@ build
 dist
 django_swagger.egg-info
 django_swagger/tests/swagger_test/*
+django_swagger/docs/_build
