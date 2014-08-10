@@ -1,3 +1,4 @@
 django>=1.5.4
 PyYAML>=3.11
 sphinx
+pytest
