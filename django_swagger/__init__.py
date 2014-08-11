@@ -9,6 +9,7 @@ class Base(object):
     errors = []
     __validators__ = []
     __attributes__ = []
+    __range__ = {}
 
     def has_errors(self):
         if len(self.errors) > 0:

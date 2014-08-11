@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-class NotPresent(Exception):
+class NotPresentError(Exception):
     pass
 
 class SerializeError(Exception):
     pass
 
-class InvalidResponse(Exception):
+class InvalidResponseError(Exception):
     pass
 
-class ValueNotFound(Exception):
+class ValueNotFoundError(Exception):
+    pass
+
+class TypeError(Exception):
     pass

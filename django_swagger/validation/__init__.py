@@ -1,25 +1,34 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 from __future__ import unicode_literals
-from django_swagger.exception import NotPresent, InvalidResponse, ValueNotFound
+from django_swagger.exception import NotPresentError, InvalidResponseError, ValueNotFoundError, TypeError
 
 
 def validate_presence_of(value):
     if not value:
-        raise NotPresent('Provided value [%s] is not present' % value)
+        raise NotPresentError('Provided value [%s] is not present' % value)
 
     if isinstance(value, str) and not value.strip():
-        raise NotPresent('Provided value is blank')
+        raise NotPresentError('Provided value is blank')
 
 
 def validate_response_type(response):
     valid_responses = ["application/json", "application/xml", "text/plain", "text/html"]
     try:
         validate_range_in(response, valid_responses)
-    except ValueNotFound:
-        raise InvalidResponse('This response is not valid. Choose a valid response: %s' % valid_responses)
+    except ValueNotFoundError:
+        raise InvalidResponseError('This response is not valid. Choose a valid response: %s' % valid_responses)
 
 
 def validate_range_in(value, range):
     if value not in range:
-        raise ValueNotFound('Value %s was not found in %s.' % (value, range))
+        raise ValueNotFoundError('Value %s was not found in %s.' % (value, range))
+
+
+def validate_type_of(value, type_var):
+    if not isinstance(value, type_var):
+        raise TypeError('Type of %s is not a %s. %s has type %s.' % (value, type_var, value, type(value)))
+
+
+def validate_int(value):
+    validate_type_of(value, int)

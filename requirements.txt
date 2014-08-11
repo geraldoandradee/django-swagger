@@ -1,4 +1,4 @@
 django>=1.5.4
 PyYAML>=3.11
 sphinx
-pytest
+inflector==2.0.7
