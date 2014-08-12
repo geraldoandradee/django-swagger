@@ -17,7 +17,9 @@ setup(
     platforms='any',
     install_requires=[
         'django>=1.5.4',
-        'PyYAML>=3.11'
+        'PyYAML>=3.11',
+        'six',
+        'inflector',
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
