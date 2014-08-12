@@ -3,7 +3,6 @@
 from __future__ import (absolute_import, unicode_literals, print_function)
 import django_swagger
 
-
 class BaseApi(django_swagger.Base):
     def validate(self):
         if len(self.__validators__):
@@ -239,5 +238,14 @@ class Api(BaseApi):
         super(Api, self).__init__(path, operations, description)
 
 
-class DocApi(BaseApi):
-    pass
+class ApiDoc(BaseApi):
+    __attributes__ = ['api_version', 'swagger_version', 'apis', 'authorizations', 'info']
+    __validators__ = [{'validate_presence_of': ['api_version', 'apis', 'info']}]
+
+    def __init__(self, api_version, apis, info, *args, **kwargs):
+        self.api_version = api_version
+        self.swagger_version = '1.2'
+        self.apis = apis
+        authorizations = {}
+        self.info = info
+        super(ApiDoc, self).__init__(*args, **kwargs)
