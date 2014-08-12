@@ -11,6 +11,9 @@ def validate_presence_of(value):
     if isinstance(value, str) and not value.strip():
         raise NotPresentError('Provided value is blank')
 
+    if not len(value):
+        raise NotPresentError('Provided list or array is empty. It must have one item.')
+
 
 def validate_response_type(response):
     valid_responses = ["application/json", "application/xml", "text/plain", "text/html"]
