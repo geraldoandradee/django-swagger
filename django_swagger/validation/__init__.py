@@ -32,3 +32,7 @@ def validate_type_of(value, type_var):
 
 def validate_int(value):
     validate_type_of(value, int)
+
+
+def validate_type_of_list(value):
+    validate_type_of(value, list)
