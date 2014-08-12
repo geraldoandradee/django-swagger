@@ -238,6 +238,38 @@ class Api(BaseApi):
         super(Api, self).__init__(path, operations, description)
 
 
+class ResourceList(BaseApi):
+    """
+    ResourceList
+    ============
+
+    This object is described in https://github.com/wordnik/swagger-spec/blob/master/versions/1.2.md#51-resource-listing.
+    Basically this endpoint
+
+    """
+    __attributes__ = ['swaggerVersion', 'apis', 'apiVersion', 'info', 'authorizations']
+    __validators__ = [{'validate_presence_of': ['path', 'operations']}, {'validate_type_of_list': ['apis']}]
+
+    def __init__(self, apis, api_version, info):
+        """
+        __init__
+        ========
+
+        Constructor of Api endpoint.
+
+        :param apis:
+        :param api_version:
+        :param info:
+        """
+        self.swaggerVersion = '1.2'
+        self.apis = apis
+        self.api_version = api_version
+        self.info = info
+        self.authorizations = {}
+        self.errors = []
+        super(ResourceList, self).__init__(apis, api_version, info)
+
+
 class ApiDoc(BaseApi):
     __attributes__ = ['api_version', 'swagger_version', 'apis', 'authorizations', 'info']
     __validators__ = [{'validate_presence_of': ['api_version', 'apis', 'info']}]

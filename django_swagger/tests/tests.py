@@ -8,6 +8,7 @@ from django_swagger.validation import validate_presence_of, validate_response_ty
 from django_swagger.exception import NotPresentError, InvalidResponseError, ValueNotFoundError, TypeError
 from django_swagger.api import Info, Parameter
 from django_swagger.response import ResponseMessage
+import six
 
 class TestValidators:
 
@@ -53,7 +54,7 @@ class TestValidators:
             validate_range_in('', valid_responses)
 
     def test_validate_type_correct(self):
-        assert validate_type_of('test', str) == None
+        assert validate_type_of('test', six.text_type) == None
         assert validate_type_of(2, int) == None
 
     def test_validate_type_incorrect(self):
@@ -83,7 +84,7 @@ class TestInfo:
     def test_serialize(self):
         info2 = Info(title='API Title', description='Some description', terms_of_service_url='', contact='', license='', license_url='')
         result = info2.serialize()
-        assert isinstance(result, str) == True
+        assert isinstance(result, six.text_type) == True
 
 
 class TestParameter:
@@ -139,7 +140,7 @@ class TestParameter:
     def test_serialization_return_type(self):
         parameter = Parameter(name="Name", description="", param_type="path", required='true', allow_multiple=False)
         result = parameter.serialize()
-        assert isinstance(result, str) == True
+        assert isinstance(result, six.text_type) == True
 
     def test_serialization_structure_return_type(self):
         parameter = Parameter(name="Name", description="", param_type="path", required='true', allow_multiple=False)
@@ -188,7 +189,7 @@ class TestResponseMessage:
     def test_serialization_response_message_type_2(self):
         response = ResponseMessage(code=0, message='')
         response = response.serialize()
-        assert isinstance(response, str) == True
+        assert isinstance(response, six.text_type) == True
 
     def test_set_default(self):
         response = ResponseMessage(code=0, message='')
