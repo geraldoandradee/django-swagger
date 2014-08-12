@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-from __future__ import unicode_literals
+from __future__ import (unicode_literals, print_function)
 from django_swagger.exception import NotPresentError, InvalidResponseError, ValueNotFoundError, TypeError
-
+import six
 
 def validate_presence_of(value):
     if not value:
         raise NotPresentError('Provided value [%s] is not present' % value)
 
-    if isinstance(value, str) and not value.strip():
+    if isinstance(value, six.text_type) and not value.strip():
         raise NotPresentError('Provided value is blank')
 
 
