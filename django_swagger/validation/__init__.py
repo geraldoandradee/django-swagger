@@ -5,11 +5,17 @@ from django_swagger.exception import NotPresentError, InvalidResponseError, Valu
 import six
 
 def validate_presence_of(value):
+    if isinstance(value, int) and value != 0:
+        return
+
     if not value:
         raise NotPresentError('Provided value [%s] is not present' % value)
 
-    if isinstance(value, six.text_type) and not value.strip():
+    if isinstance(value, six.string_types) and not value.strip():
         raise NotPresentError('Provided value is blank')
+
+    if not len(value):
+        raise NotPresentError('Provided list or array is empty. It must have one item.')
 
 
 def validate_response_type(response):

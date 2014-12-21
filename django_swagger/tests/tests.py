@@ -84,7 +84,7 @@ class TestInfo:
     def test_serialize(self):
         info2 = Info(title='API Title', description='Some description', terms_of_service_url='', contact='', license='', license_url='')
         result = info2.serialize()
-        assert isinstance(result, six.text_type) == True
+        assert isinstance(result, six.string_types) == True, "result não é do tipo texto"
 
 
 class TestParameter:
@@ -140,7 +140,7 @@ class TestParameter:
     def test_serialization_return_type(self):
         parameter = Parameter(name="Name", description="", param_type="path", required='true', allow_multiple=False)
         result = parameter.serialize()
-        assert isinstance(result, six.text_type) == True
+        assert isinstance(result, six.string_types) == True
 
     def test_serialization_structure_return_type(self):
         parameter = Parameter(name="Name", description="", param_type="path", required='true', allow_multiple=False)
@@ -189,7 +189,7 @@ class TestResponseMessage:
     def test_serialization_response_message_type_2(self):
         response = ResponseMessage(code=0, message='')
         response = response.serialize()
-        assert isinstance(response, six.text_type) == True
+        assert isinstance(response, six.string_types) == True
 
     def test_set_default(self):
         response = ResponseMessage(code=0, message='')

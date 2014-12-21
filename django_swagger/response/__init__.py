@@ -8,6 +8,12 @@ class BaseResponse(Base):
     _response_types = ["application/json", "application/xml", "text/plain", "text/html"]
 
     def validate(self):
+        """
+        validate
+        ========
+
+        Validate is a flexible function. Lets
+        """
         if len(self.__validators__):
             for validate in self.__validators__:
                 for function_to_validate in validate.keys():
@@ -30,7 +36,8 @@ class ResponseMessage(BaseResponse):
     ===============
 
     This is a response message of each Operation. Each operation has one or more ResponseMessage. The range of code
-    response is available to check it out in: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+    response is available to check it out in: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html. But for some
+    reasons we use just these: 200, 201, 203, 204, 205, 206, 400, 401, 403, 404, 405, 500.
 
     """
     __attributes__ = ['code', 'message']
